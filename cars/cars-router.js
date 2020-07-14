@@ -74,8 +74,8 @@ router.put('/:id', (req, res) => {
         console.log(err)
         db('cars')
         .then(cars => {
-            if(cars.filter(car => car['VIN'] === req.body['VIN'] )){
-                res.status(400).json({message: 'VIN must be unique'})
+            if(cars.filter(car => car['vin'] === req.body['vin'] )){
+                res.status(400).json({message: 'vin must be unique'})
             } else {
                 res.status(500).json({error: err.message})
             }

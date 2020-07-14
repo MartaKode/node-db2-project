@@ -3,7 +3,7 @@ exports.up = function (knex) {
     return knex.schema.createTable('cars', tbl => {
         tbl.increments('id') //primary key
 
-        tbl.string('VIN', 128).unique().notNullable() //Vehicle identification Number (can contains capital letters)
+        tbl.string('vin', 128).unique().notNullable() //Vehicle identification Number (can contains capital letters)
 
         tbl.string('make', 128).notNullable()
 
